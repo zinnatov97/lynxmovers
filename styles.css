@@ -44,3 +44,15 @@ a{color:inherit;text-decoration:none}button{cursor:pointer}svg{display:block;max
 
 .hero-orbit{transition:transform .2s ease,box-shadow .2s ease}.hero-orbit:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 8px 20px #190c2b33}.hero-orbit:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .price-value small{display:inline-block;margin-left:10px;letter-spacing:0}
+
+.faq-list{display:grid;gap:12px;max-width:860px}
+.faq-item{background:#fff;border:1px solid #e8e2dc;border-radius:22px;padding:0 22px;transition:border-color .2s ease,box-shadow .2s ease}
+.faq-item[open]{border-color:#c6b7db;box-shadow:0 10px 25px #1206220a}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:800;font-size:17px;line-height:1.25;letter-spacing:-.02em}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";flex:none;font-size:28px;font-weight:500;line-height:1;color:var(--purple);transition:transform .2s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:focus-visible{outline:3px solid var(--purple);outline-offset:4px;border-radius:12px}
+.faq-item p{margin:0 0 22px;color:var(--muted);line-height:1.6;font-size:15px}
+.faq-item p a{color:var(--purple);font-weight:700;text-decoration:underline}
+@media(min-width:720px){.faq-item summary{font-size:19px}.faq-item p{font-size:16px}}

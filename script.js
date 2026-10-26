@@ -62,7 +62,7 @@ window.addEventListener('scroll',()=>stickyCall.classList.toggle('is-visible',wi
 }
 
 if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-const reveals=document.querySelectorAll('.section-intro,.service-card,.price-card,.values-list>div,.photo-card,.review-card');
+const reveals=document.querySelectorAll('.section-intro,.service-card,.price-card,.values-list>div,.photo-card,.review-card,.faq-item');
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px 50px 0px'});
 reveals.forEach(el=>{el.classList.add('reveal-on-scroll');observer.observe(el)});
 }
